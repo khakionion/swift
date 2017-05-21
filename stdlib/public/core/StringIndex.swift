@@ -95,6 +95,12 @@ extension String.Index {
   var _utf16Index: Int {
     return self.encodedOffset
   }
+  
+  /// The integer offset of this index in UTF-16 code units.
+  public // SPI(Foundation)
+  var _offset: Int {
+    return self.encodedOffset
+  }
 }
 
 
