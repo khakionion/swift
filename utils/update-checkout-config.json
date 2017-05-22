@@ -3,7 +3,7 @@
     "https-clone-pattern": "https://github.com/%s.git",
     "repos" : {
         "llvm": {
-            "remote": { "id": "apple/swift-llvm" } },
+            "remote": { "id": "khakionion/swift-llvm" } },
         "clang": {
             "remote": { "id": "apple/swift-clang" } },
         "swift": {
