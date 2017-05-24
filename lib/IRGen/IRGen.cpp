@@ -428,6 +428,9 @@ bool swift::performLLVM(IRGenOptions &Opts, DiagnosticEngine *Diags,
   case IRGenOutputKind::LLVMAssembly:
     EmitPasses.add(createPrintModulePass(*RawOS));
     break;
+  case IRGenOutputKind::CIL:
+    EmitPasses.add(createPrintCILPass(*RawOS));
+    break;
   case IRGenOutputKind::LLVMBitcode:
     EmitPasses.add(createBitcodeWriterPass(*RawOS));
     break;
