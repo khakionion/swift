@@ -42,7 +42,10 @@ enum class IRGenOutputKind : unsigned {
   NativeAssembly,
 
   /// Generate an LLVM module, compile it, and assemble into an object file.
-  ObjectFile
+  ObjectFile,
+
+  /// Generate Common Intermediate Language code, suitable for passing to ilasm.
+  CIL
 };
 
 enum class IRGenDebugInfoKind : unsigned {

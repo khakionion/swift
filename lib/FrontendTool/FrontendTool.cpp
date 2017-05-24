@@ -287,6 +287,8 @@ static IRGenOutputKind getOutputKind(FrontendOptions::ActionType Action) {
     return IRGenOutputKind::LLVMAssembly;
   case FrontendOptions::EmitBC:
     return IRGenOutputKind::LLVMBitcode;
+  case FrontendOptions::EmitCIL:
+    return IRGenOutputKind::CIL;
   case FrontendOptions::EmitAssembly:
     return IRGenOutputKind::NativeAssembly;
   case FrontendOptions::EmitObject:

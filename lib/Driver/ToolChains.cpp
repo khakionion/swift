@@ -215,6 +215,9 @@ ToolChain::constructInvocation(const CompileJobAction &job,
     case types::TY_LLVM_BC:
       FrontendModeOption = "-emit-bc";
       break;
+    case types::TY_LLVM_CIL:
+      FrontendModeOption = "-emit-cil";
+      break;
     case types::TY_Assembly:
       FrontendModeOption = "-S";
       break;

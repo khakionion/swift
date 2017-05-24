@@ -1099,6 +1099,10 @@ void Driver::buildOutputInfo(const ToolChain &TC, const DerivedArgList &Args,
       OI.CompilerOutputType = types::TY_LLVM_IR;
       break;
 
+    case options::OPT_emit_cil:
+      OI.CompilerOutputType = types::TY_LLVM_CIL;
+      break;
+
     case options::OPT_emit_bc:
       OI.CompilerOutputType = types::TY_LLVM_BC;
       break;

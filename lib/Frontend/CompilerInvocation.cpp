@@ -258,6 +258,8 @@ static bool ParseFrontendArgs(FrontendOptions &Opts, ArgList &Args,
       Action = FrontendOptions::EmitAssembly;
     } else if (Opt.matches(OPT_emit_ir)) {
       Action = FrontendOptions::EmitIR;
+    } else if (Opt.matches(OPT_emit_cil)) {
+      Action = FrontendOptions::EmitCIL;
     } else if (Opt.matches(OPT_emit_bc)) {
       Action = FrontendOptions::EmitBC;
     } else if (Opt.matches(OPT_emit_sil)) {
@@ -544,6 +546,11 @@ static bool ParseFrontendArgs(FrontendOptions &Opts, ArgList &Args,
       break;
     }
 
+    case FrontendOptions::EmitCIL: {
+      Suffix = "cil";
+      break;
+    }
+
     case FrontendOptions::EmitBC: {
       Suffix = "bc";
       break;
@@ -722,6 +729,7 @@ static bool ParseFrontendArgs(FrontendOptions &Opts, ArgList &Args,
     case FrontendOptions::EmitSIB:
     case FrontendOptions::EmitIR:
     case FrontendOptions::EmitBC:
+    case FrontendOptions::EmitCIL:
     case FrontendOptions::EmitAssembly:
     case FrontendOptions::EmitObject:
     case FrontendOptions::EmitImportedModules:
@@ -753,6 +761,7 @@ static bool ParseFrontendArgs(FrontendOptions &Opts, ArgList &Args,
     case FrontendOptions::EmitSIB:
     case FrontendOptions::EmitIR:
     case FrontendOptions::EmitBC:
+    case FrontendOptions::EmitCIL:
     case FrontendOptions::EmitAssembly:
     case FrontendOptions::EmitObject:
     case FrontendOptions::EmitImportedModules:
@@ -785,6 +794,7 @@ static bool ParseFrontendArgs(FrontendOptions &Opts, ArgList &Args,
     case FrontendOptions::EmitSIB:
     case FrontendOptions::EmitIR:
     case FrontendOptions::EmitBC:
+    case FrontendOptions::EmitCIL:
     case FrontendOptions::EmitAssembly:
     case FrontendOptions::EmitObject:
     case FrontendOptions::EmitImportedModules:
@@ -820,6 +830,7 @@ static bool ParseFrontendArgs(FrontendOptions &Opts, ArgList &Args,
     case FrontendOptions::EmitSIB:
     case FrontendOptions::EmitIR:
     case FrontendOptions::EmitBC:
+    case FrontendOptions::EmitCIL:
     case FrontendOptions::EmitAssembly:
     case FrontendOptions::EmitObject:
     case FrontendOptions::EmitImportedModules:

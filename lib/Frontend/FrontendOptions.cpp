@@ -40,6 +40,7 @@ bool FrontendOptions::actionHasOutput() const {
     return false;
   case EmitAssembly:
   case EmitIR:
+  case EmitCIL:
   case EmitBC:
   case EmitObject:
   case EmitImportedModules:
@@ -72,6 +73,7 @@ bool FrontendOptions::actionIsImmediate() const {
     return true;
   case EmitAssembly:
   case EmitIR:
+  case EmitCIL:
   case EmitBC:
   case EmitObject:
   case EmitImportedModules:

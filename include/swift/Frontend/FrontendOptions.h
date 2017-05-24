@@ -171,6 +171,7 @@ public:
     EmitAssembly, ///< Emit assembly
     EmitIR, ///< Emit LLVM IR
     EmitBC, ///< Emit LLVM BC
+    EmitCIL, ///< Emit Common Intermediate Language
     EmitObject, ///< Emit object file
   };
 

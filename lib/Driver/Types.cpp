@@ -72,6 +72,7 @@ bool types::isTextual(ID Id) {
   case types::TY_Assembly:
   case types::TY_RawSIL:
   case types::TY_LLVM_IR:
+  case types::TY_LLVM_CIL:
   case types::TY_ObjCHeader:
   case types::TY_AutolinkFile:
   case types::TY_ImportedModules:
@@ -106,6 +107,7 @@ bool types::isAfterLLVM(ID Id) {
   case types::TY_Assembly:
   case types::TY_LLVM_IR:
   case types::TY_LLVM_BC:
+  case types::TY_LLVM_CIL:
   case types::TY_Object:
     return true;
   case types::TY_Swift:
@@ -149,6 +151,7 @@ bool types::isPartOfSwiftCompilation(ID Id) {
   case types::TY_Assembly:
   case types::TY_LLVM_IR:
   case types::TY_LLVM_BC:
+  case types::TY_LLVM_CIL:
   case types::TY_Object:
   case types::TY_Dependencies:
   case types::TY_ObjCHeader:

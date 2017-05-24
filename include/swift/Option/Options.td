@@ -508,6 +508,9 @@ def emit_bc : Flag<["-"], "emit-bc">,
 def emit_ir : Flag<["-"], "emit-ir">,
   HelpText<"Emit LLVM IR file(s)">, ModeOpt,
   Flags<[FrontendOption, NoInteractiveOption, DoesNotAffectIncrementalBuild]>;
+def emit_cil : Flag<["-"], "emit-cil">,
+  HelpText<"Emit Common Intermediate Language file(s)">, ModeOpt,
+  Flags<[FrontendOption, NoInteractiveOption, DoesNotAffectIncrementalBuild]>;
 def emit_sil : Flag<["-"], "emit-sil">,
   HelpText<"Emit canonical SIL file(s)">, ModeOpt,
   Flags<[FrontendOption, NoInteractiveOption, DoesNotAffectIncrementalBuild]>;
